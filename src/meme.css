@@ -1,0 +1,156 @@
+/* Base Container */
+.meme-box {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.meme-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Select & Text Inputs */
+select,
+input[type="text"],
+input[type="range"],
+input[type="color"],
+select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Text Input Row */
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.inputs input {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Font Customization Panel */
+.customization-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.customization-panel label {
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Meme Image Container */
+.draggable-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  user-select: none;
+  margin-top: 20px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Meme Image */
+.draggable-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Draggable Text Style */
+.draggable-text {
+  position: absolute;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px black;
+  cursor: move;
+  user-select: none;
+  pointer-events: auto;
+  word-break: break-word;
+}
+
+/* Download Button */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .meme-box {
+    padding: 15px;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .customization-panel label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meme-box h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .draggable-text {
+    font-size: 24px !important;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
